@@ -1,0 +1,12 @@
+sudo: required
+language: objective-c
+
+# 10.13 (see https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
+osx_image: xcode9.3
+
+script:
+  - brew install --verbose --debug https://gist.githubusercontent.com/felixbuenemann/0bfe17b7da8a6470880f33008bae828a/raw/c29799fee2a13614089db258568f79e9ddcf9da5/samba.rb
+  - env
+  - which smbclient | true
+  - which smbpasswd | true
+  - brew list
